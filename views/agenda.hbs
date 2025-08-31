@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{#if varMensaje }}
+        <div class="alert alert-{{varEstiloMensaje}}" role="alert">
+            {{varMensaje}}
+        </div>
+    {{/if}}
+
+    <form class="row g-3" method="post" action="/agenda">
+        <div class="mb-3">
+            <label for="staticEmail2" class="col-form-label">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword2" class="col-form-label">Hora:</label>
+            <input type="time" class="form-control" id="hora" name="hora" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword2" class="col-form-label">Descripción:</label>
+            <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" required>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3">Confirmar cita</button>
+        </div>
+</form>
+</body>
+</html>

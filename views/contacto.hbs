@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{#if varMensaje }}
+        <div class="alert alert-{{varEstiloMensaje}}" role="alert">
+            {{varMensaje}}
+        </div>
+    {{/if}}
+
+    <form method="post" action="/contacto">
+        <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido">
+        </div>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-text">
+                <input class="form-check-input mt-0" type="radio" name="sexo" id="femenino" value="femenino">
+                <label for="femenino" class="ms-2">Femenino</label>
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-text">
+                <input class="form-check-input mt-0" type="radio" name="sexo" id="masculino" value="masculino">
+                <label for="masculino" class="ms-2">Masculino</label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

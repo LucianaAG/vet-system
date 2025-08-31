@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const homeController = require("../controllers/homeControllers");
+router.get("/", homeController.home);
+router.get("/personal", homeController.personal);
+router.get("/mascotas", homeController.mascotas);
+router.get("/agenda", homeController.agenda);
+router.get("/contacto", homeController.contacto);
+router.post("/contacto", homeController.contacto_post);
+router.post("/agenda", homeController.agenda_post);
+module.exports = router;
